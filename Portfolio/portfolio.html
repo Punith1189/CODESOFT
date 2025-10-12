@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punith Reddy | Video Resume</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #cb9011, #2575fc);
+      color: #fff;
+      line-height: 2;
+      padding: 0 15px;
+      height: 100px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(100px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Logo */
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 8px; /* remove for square */
+      border: 2px solid #fff;
+    }
+
+    .profile-img-nav {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffdd59;
+    }
+
+    .nav-left span {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #ffdd59;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: right;
+      gap:50px;
+      height: 90px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      position: relative;
+      width:100px;
+      height: 150px;
+      font-size: 20px;
+      top: 70px;
+
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffdd59;
+    }
+
+    .upload-btn {
+      background: #ffdd59;
+      color: #1e1e1e;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .upload-btn:hover {
+      background: #fff;
+      color: #6a11cb;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .header-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .header-text p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+    }
+
+    /* Card */
+    .card {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-left: 5px solid #ffdd59;
+      padding-left: 10px;
+      color: #ffdd59;
+    }
+
+    .card p, .card li {
+      font-size: 1.1rem;
+      color: #f1f1f1;
+    }
+
+    /* Video */
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .header-text h1 {
+        font-size: 2.2rem;
+      }
+      .card {
+        margin: 20px 10px;
+        padding: 20px;
+        width: 100px;
+        height: 50px;
+      }
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="punith.jpeg" alt="" class="profile-img-nav">
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+      <button class="upload-btn" onclick="document.getElementById('resumeUpload').click()">Upload Resume</button>
+      <input type="file" id="resumeUpload" style="display:none" accept=".pdf,.doc,.docx">
+    </div>
+  </nav>
+  <header id="home">
+    <div class="header-text">
+      <h1>Hi, I'm Punith Reddy</h1>
+      <p>Pursuing MCA at Mother Theresa College, Palamner</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <div class="card" id="about">
+    <h2>About Me</h2>
+    <p>Hi Sir , I Am Punith Reddy. I Am From Kuppam. Now I Am Pursuing MCA in Mother Theresa Institute of
+      Computer Application College ,Palamner.and i Have completerd Degree BSC(mpcs) in Goverment Degree college in Kuppam.My Hobbies Playnig game , Prepare for a Interviews.</p>
+  </div>
+
+  <!-- Skills -->
+  <div class="card" id="skills">
+    <h2>Skills</h2>
+    <p>Java   Python  HTML/CSS   SQL</p>
+  </div>
+
+  <!-- Projects -->
+  <div class="card" id="projects">
+    <h2>Projects</h2>
+    <p>E-Commerec Appliction :</p><p>
+      I developed an E-Commerce website similar to Flipkart, where users can browse products, add them to a cart, and place orders. The platform includes secure user authentication and payment gateway integration for smooth transactions. I designed a responsive user interface for product search and order management. The backend is supported by a relational database to handle users, products, and orders efficiently. This project simulates a realworld online shopping experience with focus on scalability and usability.  
+    </p>
+    <p>Movie Flix:</p><p>
+          “I created a project called MovieFlix, which works like Movieflix for streaming movies online. It allows users to sign  	up, explore movies, and watch content smoothly. I  also added subscription and payment options so users can access premium content. 
+This project highlights my ability to build real-world applications that people can actually use.” 
+</p>
+  </div>
+
+  <!-- Certificates -->
+  <div class="card" id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>
+        <strong>Java Programming Certification</strong> – 
+        <a href="certificate (3).pdf" target="_blank" style="color:#ffdd59;">View</a>
+        </br>
+        <strong>> Hacker Rank Java Programming Certification</strong> 
+        <a href="java_basic certificate.pdf" target="_blank" style="color:#ffdd59;">View</a>
+
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div class="card" id="contact">
+    <h2>Contact</h2>
+    <p> phone : 8919324976</p>
+    <p>Email: <a href="mailto:punithreddy@email.com" style="color:#ffdd59;">punithreddy@email.com</a></p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/punith-reddy-67060a2a5">LinkedIn </a><br> 
+      <a href="https://github.com/Punith1189">GitHub</a>
+    </br>
+      <a href="https://leetcode.com/u/punith143/">LeetCode</a>
+
+      <br>
+      <a href="Punith Mca.pdf" download>Download Resume</a>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Punith Reddy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const uploadInput = document.getElementById("resumeUpload");
+    uploadInput.addEventListener("change", function() {
+      if(this.files.length > 0) {
+        alert("Uploaded: " + this.files[0].name);
+      }
+    });
+  </script>
+
+</body>
+</html>
